@@ -12,7 +12,7 @@ const About: NextPage = () => {
         <title>{t('head.title')}</title>
         <meta name="description" content={t('head.description')} />
       </Head>
-      <div className={styles.title}>
+      <div className="title">
       <h2>{t('h2')}</h2>
       </div>
       <div className={styles.content}>

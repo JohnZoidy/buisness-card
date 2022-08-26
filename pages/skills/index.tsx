@@ -1,48 +1,78 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import styles from "../../styles/About.module.scss";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import styles from "../../styles/Skills.module.scss";
 
-const About: NextPage = () => {
-  const { t } = useTranslation('about');
+const Skills: NextPage = () => {
+  const { t } = useTranslation("skills");
   return (
-    <div className={styles.main}>
+    <div className="main">
       <Head>
-        <title>{t('head.title')}</title>
-        <meta name="description" content={t('head.description')} />
+        <title>{t("head.title")}</title>
+        <meta name="description" content={t("head.description")} />
       </Head>
-      <div className={styles.title}>
+      <div className="title">
       <h2>{t('h2')}</h2>
       </div>
-      <div className={styles.content}>
-        <p>{t('text1')}<br />{t('text2')}
-        </p>
-        <p>
-          {t('text3')}
-        </p>
-        <p>
-          {t('text4')}
-        </p>
+      <p>{t('info')}</p>
+      <div className={styles.skill}>
+      <div className={styles.progressbar}>
+        <svg>
+          <circle cx="80" cy="80" r="70" className={styles.html}></circle>
+        </svg>
+        <span className={styles.progressbar__text}>HTML</span>
       </div>
-      <div className={styles.bubble} />
-      <div className={styles.bubble} />
-      <div className={styles.bubble} />
-      <div className={styles.bubble} />
-      <div className={styles.bubble} />
-      <div className={styles.bubble} />
+        <p>{t('html')}</p>
+      </div>
+      <div className={styles.skill}>
+      <div className={styles.progressbar}>
+        <svg>
+          <circle cx="80" cy="80" r="70" className={styles.scss}></circle>
+        </svg>
+        <span className={styles.progressbar__text}>SCSS</span>
+      </div>
+      <p>{t('scss')}</p>
+      </div>
+      <div className={styles.skill}>
+      <div className={styles.progressbar}>
+        <svg>
+          <circle cx="80" cy="80" r="70" className={styles.js}></circle>
+        </svg>
+        <span className={styles.progressbar__text}>JS/TS</span>
+      </div>
+      <p>{t('js')}</p>
+      </div>
+      <div className={styles.skill}>
+      <div className={styles.progressbar}>
+        <svg>
+          <circle cx="80" cy="80" r="70" className={styles.react}></circle>
+        </svg>
+        <span className={styles.progressbar__text}>React</span>
+      </div>
+      <p>{t('react')}</p>
+      </div>
+      <div className={styles.skill}>
+      <div className={styles.progressbar}>
+        <svg>
+          <circle cx="80" cy="80" r="70" className={styles.english}></circle>
+        </svg>
+        <span className={styles.progressbar__text}>English B2</span>
+      </div>
+      <p>{t('english')}</p>
+      </div>
     </div>
   );
 };
 
 type propsType = {
   locale: string;
-}
+};
 
 export const getStaticProps = async ({ locale }: propsType) => ({
   props: {
-    ...await serverSideTranslations(locale, ['about', 'header']),
+    ...(await serverSideTranslations(locale, ["skills", "header"])),
   },
-})
+});
 
-export default About;
+export default Skills;

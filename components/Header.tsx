@@ -18,7 +18,7 @@ const Header: FC = () => {
     { id: 0, name: t("home"), path: "/" },
     { id: 1, name: t("about"), path: "/about" },
     { id: 3, name: t("resume"), path: "/resume" },
-    { id: 4, name: t("skills"), path: "/skils" },
+    { id: 4, name: t("skills"), path: "/skills" },
     { id: 5, name: t("projects"), path: "/projects" },
     { id: 6, name: t("contact"), path: "/contacts" },
   ];
