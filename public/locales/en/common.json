@@ -1,0 +1,15 @@
+{
+  "head": {
+    "title": "Evgeniy buisness card",
+    "description": "Evgeniy's (JohnZoidy) personal page, frontend developer portfolio"
+  },
+  "hello": "Hello!",
+  "Im": "I'm",
+  "name": "Evgeniy",
+  "proffesion": "Frontend developer, system administrator",
+  "location": "Based in Russian Federation, Volgodonsk city",
+  "buttons": {
+    "CV": "Download CV",
+    "action": "Get in Touch!"
+  }
+  }

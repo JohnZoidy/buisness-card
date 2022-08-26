@@ -1,0 +1,100 @@
+.main {
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.description {
+  margin-left: 269px;
+  h3 {
+    margin: 0;
+    text-align: center;
+    color: rgb(250, 250, 250);
+    padding-bottom: 10px;
+    width: 197px;
+    height: 72px;
+    font-size: 36px;
+    line-height: 70px;
+    background: linear-gradient(90deg, #32f6f6 0%, #a6a79f 100%);
+    border-radius: 50px 50px 50px 0px;
+  }
+  h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 64px;
+    line-height: 85px;
+  }
+  h1 > span {
+    color: #737373;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 260px;
+      height: 0px;
+      background: var(--color);
+      border: 5px solid var(--color);
+      border-radius: 10px;
+      top: 72px;
+      left: -5px;
+      transform: rotate(-1.03deg);
+    }
+  }
+  p {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+.photo {
+  position: absolute;
+  right: 13%;
+  top: -20%;
+  filter: drop-shadow(10px 25px 20px var(--shadow-color));
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5.8%;
+    left: -2.6%;
+    width: 500px;
+    height: 575px;
+    border-radius: 170px 300px 300px 800px;
+    background: url("/photo.png") no-repeat;
+    background-size: cover;
+    transform: rotate(1.9deg);
+    z-index: 2;
+  }
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 375px;
+  margin-top: 102px;
+  button {
+    width: 175px;
+    height: 60px;
+    cursor: pointer;
+    color: #fefefe;
+    background: linear-gradient(90deg, #df580c 0%, #fd993d 100%);
+    border: 3px solid #ffffff;
+    box-shadow: 0px 10px 25px var(--shadow-color);
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 27px;
+    transition: all 0.2s ease;
+    z-index: 1;
+  }
+  :hover {
+    transform: scale(1.1);
+  }
+  :nth-child(2) {
+    background: linear-gradient(90deg, #434343 0%, #000000 100%);
+  }
+}
+
+

@@ -1,0 +1,33 @@
+.title {
+    display: flex;
+    margin-bottom: 37px;
+}
+.title::after {
+    content: '';
+    width: 697px;
+    border-bottom: 1px solid var(--color);
+    bottom: 15px;
+    position: relative;
+}
+
+.content {
+    p {
+        position: relative;
+        font-family: "Raleway", sans-serif;
+        font-size: 22px;
+        margin: 0;
+        margin-bottom: 32px;
+        text-align: justify;
+        z-index: 1;
+      }
+}
+
+.content::after {
+    content: '';
+    display: block;
+    width: 348px;
+    border-bottom: 1px solid var(--color);
+    top: 42px;
+    left: 350px;
+    position: relative;
+}

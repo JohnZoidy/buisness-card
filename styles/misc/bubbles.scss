@@ -1,0 +1,72 @@
+.bubble {
+    border-radius: 50%;
+    background: var(--yellow);
+    position: absolute;
+    filter: drop-shadow(10px 25px 20px var(--shadow-color)) blur(3px);
+    z-index: 0;
+    animation: updown linear 37s infinite,
+      leftside ease-in-out 23s infinite,
+      vastag linear 29s infinite,
+      forog linear 31s infinite;
+  }
+  .bubble:nth-child(2) {
+    animation: updown ease-in 41s infinite,
+    rightside ease-in-out 47s infinite,
+      vastag linear 23s infinite,
+      forog linear 29s infinite;
+  }
+  .bubble:nth-child(3) {
+    background: #D1D1D1;
+    animation: updown ease-out 43s infinite,
+    leftside ease-in-out 53s infinite,
+      vastag linear 29s infinite,
+      forog linear 31s infinite;
+  }
+  .bubble:nth-child(4) {
+    background: #D1D1D1;
+    animation: updown ease-in-out 47s infinite,
+    rightside ease-in-out 59s infinite,
+      vastag linear 31s infinite,
+      forog linear 41s infinite;
+  }
+  .bubble:nth-child(5) {
+    background: #D1D1D1;
+    animation: updown ease-in-out 29s infinite,
+    leftside ease-in-out 31s infinite,
+      vastag linear 37s infinite,
+      forog linear 47s infinite;
+  }
+  .bubble:last-child {
+    animation: updown linear 53s infinite,
+    rightside ease-in-out 29s infinite,
+      vastag linear 19s infinite,
+      forog linear 37s infinite;
+  }
+
+  @keyframes updown {
+    0%   {bottom: 22%;}
+  50%  {bottom: 3%;}
+   100%  {bottom: 22%;}
+}
+
+@keyframes leftside {
+    0%   {left: 1%;}
+  50%  {left: 15%;}
+   100%  {left: 1%;}
+}
+
+@keyframes rightside {
+    0%   {right: 1%;}
+  50%  {right: 15%;}
+   100%  {right: 1%;}
+}
+
+@keyframes vastag {
+    0%   {width: 8vh; height: 8vh;}
+  50%  {width: 32vh; height: 32vh;}
+   100%  {width: 8vh; height: 8vh;}
+}
+
+@keyframes forog {
+  100% {transform: rotate(360deg);}
+}

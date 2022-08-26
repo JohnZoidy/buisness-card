@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+@import 'misc/bubbles';
+
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  white-space: pre-line;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--color);
+  background-color: var(--background-color);
+  transition:
+    color 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.wrapper {
+  padding: 59px 112px;
+}
+.main {
+  margin-left: 410px;
+  margin-right: 240px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 60px;
+}
+h2::first-letter {
+  font-size: 64px;
+  line-height: 85px;
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &.active {
+    text-decoration: underline;
+  }
+}
+
+.socials {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 130px;
+  justify-content: space-around;
+  margin-left: 112px;
+  width: 45px;
+  z-index: 1;
+}
+
+.contacts {
+  position: relative;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px; 
+  list-style: none;
+  z-index: 1;
+  a {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color);
+    border-radius: 20%;
+    &:hover {
+      background: var(--shadow-color);
+    }
+  }
+}
+
+.mail {
+  position: absolute;
+  font-size: 15px;
+  border-left: 5px solid var(--color);
+  padding-left: 50px;
+  left: 70vw;
+  top: 10px;
+  transform: rotateZ(-90deg);
+}
+
+:root, :root.light {
+  --color: rgb(5, 5, 5);
+  --background-color: rgb(250, 250, 250);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --yellow: #FFF500;
+  --image-filter: grayscale(0%);
+  img:not([src*=".svg"]) {
+    filter: var(--image-filter);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: rgb(250, 250, 250);
+    --background-color: rgb(5, 5, 5);
+    --shadow-color: rgba(255, 255, 255, 0.25);
+    --yellow: #ffbb00;
+    --image-filter: grayscale(20%);
+    img:not([src*=".svg"]) {
+      filter: var(--image-filter);
+      }
+  }
+}
+
+:root.dark {
+  --color: rgb(250, 250, 250);
+  --background-color: rgb(5, 5, 5);
+  --shadow-color: rgba(255, 255, 255, 0.25);
+  --yellow: #ffbb00;
+  --image-filter: grayscale(20%);
+  img:not([src*=".svg"]) {
+    filter: var(--image-filter);
+    }
+    .socials svg, .contacts svg {
+      filter: invert(100%);
+    }
+}

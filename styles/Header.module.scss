@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: space-between;
+    }
+    margin-bottom: 106px;
+}
+
+.themeSwithcer {
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    }
+
+.localeSwitcher {
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding-top: 8px;
+}
+
+.localeSwitcher + span {
+    opacity: 0;
+    font-size: 12px;
+    font-weight: light;
+    width: 120px;
+    background-color: var(--shadow-color);
+    color: var(--color);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    right: -4.6%;
+    top: 115%;
+    z-index: 1;
+    transition: all 0.2s ease;
+  }
+
+  .localeSwitcher + span::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--shadow-color) transparent;
+}
+
+  .localeSwitcher:hover + span {
+    opacity: 1;
+  }
