@@ -6,26 +6,32 @@
         position: relative;
         display: flex;
         align-items: center;
-        width: 50%;
+        width: 40vw;
         justify-content: space-between;
     }
-    margin-bottom: 106px;
+    margin-bottom: 170px;
+}
+
+.switchers {
+  position: relative;
+}
+
+.themeSwithcer, .localeSwitcher {
+  border: none;
+  background: none;
+  position: relative;
+}
+
+.localeSwitcher {
+  bottom: 4px;
 }
 
 .themeSwithcer {
-    border: none;
+    cursor: pointer;
     width: 40px;
     height: 40px;
-    cursor: pointer;
-    background: none;
+    margin-right: 20px;
     }
-
-.localeSwitcher {
-    border: none;
-    cursor: pointer;
-    background: none;
-    padding-top: 8px;
-}
 
 .localeSwitcher + span {
     opacity: 0;
@@ -38,7 +44,7 @@
     padding: 5px 0;
     border-radius: 6px;
     position: absolute;
-    right: -4.6%;
+    right: -33%;
     top: 115%;
     z-index: 1;
     transition: all 0.2s ease;
@@ -55,6 +61,24 @@
     border-color: transparent transparent var(--shadow-color) transparent;
 }
 
-  .localeSwitcher:hover + span {
-    opacity: 1;
+  .localeSwitcher:hover {
+    & + span {
+      opacity: 1;
+    }
+    cursor: pointer;
+  }
+
+  @media screen and (max-width:1300px) {
+    .header {
+      nav {
+        flex-direction: column;
+        align-items:flex-start;
+      }
+  }
+  }
+
+  @media screen and (max-width:900px) {
+    .header {
+      margin-bottom: 50px;
+  }
   }

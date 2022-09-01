@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap');
 @import 'misc/bubbles';
 
 :root {
@@ -11,6 +11,7 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   white-space: pre-line;
   overflow-x: hidden;
   padding: 0;
@@ -27,36 +28,69 @@ body {
     background-color 0.5s ease;
 }
 
-.wrapper {
-  padding: 59px 112px;
-}
-.main {
-  margin-left: 410px;
-  margin-right: 240px;
+p {
+  position: relative;
+  text-align: justify;
+  font-weight: 200;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  margin: 0;
+  z-index: 1;
+  a {
+    color: var(--link);
+    text-decoration: underline;
+  }
 }
 
-.title {
-  display: flex;
-  margin-bottom: 37px;
+b {
+  font-weight: medium;
 }
-.title::after {
-  content: '';
-  width: 65%;
-  border-bottom: 1px solid var(--color);
-  bottom: 15px;
+
+.wrapper {
+  padding: 59px 6vw 59px 12vw;
+}
+
+main {
+  margin-left: 14vw;
+  margin-right: 12vw;
+}
+
+h1, h2, h3 {
   position: relative;
+  margin: 0;
 }
 
 h2 {
-  margin: 0;
   font-weight: 400;
   font-size: 44px;
   line-height: 60px;
+  margin-bottom: 37px;
 }
 h2::first-letter {
   font-size: 64px;
   line-height: 85px;
   font-weight: 600;
+}
+
+h3 {
+  margin-bottom: 37px;
+  border-bottom: 1px solid var(--color);
+  a {
+    color: var(--link);
+  }
+}
+h3::first-letter {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h2::after {
+  content: '';
+  width: 50%;
+  margin-left: 30px;
+  border-bottom: 1px solid var(--color);
+  bottom: 15px;
+  position: absolute;
 }
 
 a {
@@ -69,21 +103,31 @@ a {
 
 .socials {
   display: flex;
-  position: relative;
+  position: fixed;
+  bottom: 59px;
   flex-direction: column;
   height: 130px;
   justify-content: space-around;
-  margin-left: 112px;
   width: 45px;
   z-index: 1;
 }
 
-.contacts {
+.contact {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin: 5px 0;
+}
+
+.contact_links {
   position: relative;
   display: grid;
-  margin: 0;
+  margin: 40px 0;
   padding: 0;
-  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px; 
@@ -113,10 +157,17 @@ a {
   transform: rotateZ(-90deg);
 }
 
+.resumes {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
 :root, :root.light {
   --color: rgb(5, 5, 5);
   --background-color: rgb(250, 250, 250);
   --shadow-color: rgba(0, 0, 0, 0.25);
+  --link: #009231;
   --yellow: #FFF500;
   --image-filter: grayscale(0%);
   img:not([src*=".svg"]) {
@@ -129,7 +180,8 @@ a {
     --color: rgb(250, 250, 250);
     --background-color: rgb(5, 5, 5);
     --shadow-color: rgba(255, 255, 255, 0.25);
-    --yellow: #ffbb00;
+    --yellow: #e4a700;
+    --link: #58ff90;
     --image-filter: grayscale(20%);
     img:not([src*=".svg"]) {
       filter: var(--image-filter);
@@ -141,12 +193,68 @@ a {
   --color: rgb(250, 250, 250);
   --background-color: rgb(5, 5, 5);
   --shadow-color: rgba(255, 255, 255, 0.25);
-  --yellow: #ffbb00;
+  --yellow: #e4a700;
+  --link: #58ff90;
   --image-filter: grayscale(20%);
   img:not([src*=".svg"]) {
     filter: var(--image-filter);
     }
-    .socials svg, .contacts svg {
-      filter: invert(100%);
+    .socials, .contact_links, .resumes, .contact {
+      svg {
+        filter: invert(100%);
+      }
     }
+}
+
+@media screen and (max-width:1300px) {
+  main {
+    margin-left: 12vw;
+    margin-right: 6vw;
+  }
+  h2::after {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .wrapper {
+    padding: 59px 3vw 59px 6vw;
+  }
+  .mail {
+    position: absolute;
+    left: -90px;
+    top: -160px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  h2 {
+    font-size: 28px;
+    line-height: 20px;
+    margin-bottom: 17px;
+  }
+  h2::first-letter {
+    font-size: 44px;
+  }
+  h2::after {
+    width: 0;
+  }
+  h3::first-letter {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .contact_links {
+    margin: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    a {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .contact {
+    width: 240px;
+    font-size: 18px;
+  }
 }

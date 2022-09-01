@@ -1,0 +1,31 @@
+.description {
+  p {
+    border-bottom: 1px solid var(--color);
+    padding-bottom: 5px;
+  }
+}
+
+.tags {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  span {
+    position: relative;
+    display: block;
+    background: var(--shadow-color);
+    border-radius: 10px;
+    padding: 10px 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    &:hover {
+      background: var(--yellow);
+    }
+  }
+}
+
+@media screen and (max-width:1300px) {
+  .description {
+    margin-top: auto;
+  }
+}

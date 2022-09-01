@@ -1,10 +1,11 @@
 .main {
-  margin-bottom: 45px;
+  margin: 0;
+  margin-bottom: 85px;
   position: relative;
 }
 
 .description {
-  margin-left: 269px;
+  margin-left: 157px;
   h3 {
     margin: 0;
     text-align: center;
@@ -40,11 +41,6 @@
       transform: rotate(-1.03deg);
     }
   }
-  p {
-    font-family: "Raleway", sans-serif;
-    font-size: 24px;
-    margin: 0;
-  }
 }
 
 .photo {
@@ -56,14 +52,14 @@
   &::before {
     content: "";
     position: absolute;
-    top: -5.8%;
-    left: -2.6%;
+    top: -5.5%;
+    left: -2.7%;
     width: 500px;
     height: 575px;
     border-radius: 170px 300px 300px 800px;
     background: url("/photo.png") no-repeat;
     background-size: cover;
-    transform: rotate(1.9deg);
+    transform: rotate(1.2deg);
     z-index: 2;
   }
 }
@@ -97,4 +93,92 @@
   }
 }
 
+@media screen and (max-width:1700px) {
+  .photo {
+    &::before {
+      width: 285px;
+      height: 366px;
+    }
+    svg {
+      width: 300px;
+      height: 375px;
+    }
+  }
+}
 
+@media screen and (max-width:1300px) {
+  .photo {
+    top: -68%;
+    right: 20%;
+  }
+  .description {
+    margin-left: 107px;
+    h3 {
+      width: 147px;
+      height: 62px;
+      font-size: 26px;
+      line-height: 55px;
+    }
+    h1 {
+      font-size: 54px;
+      line-height: 85px;
+    }
+    h1 > span {
+      &::before {
+        width: 200px;
+        height: 0px;
+        top: 66px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:900px) {
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 27px;
+  }
+  .photo {
+    position: relative;
+    top: 0;
+    right: 0;
+    &::before {
+      width: 204px;
+      height: 274px;
+      top: -10px;
+      left: auto;
+    }
+    svg {
+      width: 220px;
+      height: 300px;
+    }
+  }
+  .main {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .description {
+    h1 {
+      font-size: 44px;
+    }
+    h1 > span {
+      &::before {
+        width: 160px;
+        top: 56px;
+      }
+    }
+    p {
+      width: 80%;
+    }
+  }
+  .buttons {
+    margin-top: 25px;
+    flex-direction: column;
+    height: 140px;
+    align-items: center;
+  }
+}

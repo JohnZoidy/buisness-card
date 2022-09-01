@@ -48,11 +48,6 @@ const Header: FC = () => {
 
   return (
     <header className={styles.header}>
-      <div>
-        <Link href="/">
-          <h2 className="logo">LOGO</h2>
-        </Link>
-      </div>
       <nav>
         {navData.map((item) => (
           <Link key={item.id} href={item.path}>
@@ -61,7 +56,9 @@ const Header: FC = () => {
             </a>
           </Link>
         ))}
-        <button className={styles.themeSwithcer} onClick={themeChangeHandler}>
+      </nav>
+      <div className={styles.switchers}>
+      <button className={styles.themeSwithcer} onClick={themeChangeHandler}>
           {theme === themeTypes.DARK ? <svg
             width="40"
             height="40"
@@ -175,7 +172,7 @@ const Header: FC = () => {
           </button>
         </Link>
         <span>{t('switcher')}</span>
-      </nav>
+      </div>
     </header>
   );
 };

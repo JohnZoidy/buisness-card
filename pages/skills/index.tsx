@@ -7,15 +7,13 @@ import styles from "../../styles/Skills.module.scss";
 const Skills: NextPage = () => {
   const { t } = useTranslation("skills");
   return (
-    <div className="main">
+    <main>
       <Head>
         <title>{t("head.title")}</title>
         <meta name="description" content={t("head.description")} />
       </Head>
-      <div className="title">
       <h2>{t('h2')}</h2>
-      </div>
-      <p>{t('info')}</p>
+      <p><b>{t('soft')}</b>{t('info')}<b>{t('hard')}</b></p>
       <div className={styles.skill}>
       <div className={styles.progressbar}>
         <svg>
@@ -61,7 +59,7 @@ const Skills: NextPage = () => {
       </div>
       <p>{t('english')}</p>
       </div>
-    </div>
+    </main>
   );
 };
 

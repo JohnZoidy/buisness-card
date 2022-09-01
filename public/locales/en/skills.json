@@ -4,10 +4,12 @@
       "description": "Evgeniy's (JohnZoidy) personal page, frontend developer portfolio"
     },
     "h2": "My skills",
-    "info": "Soft skills: attentiveness, respect for colleagues, perseverance, purposefulness, moderate initiative, ability to work in a team. I have experience working in different companies (as a system administrator) and interacting with people with different technical backgrounds.\nI have experience in selecting tasks, drawing up a plan for solving problems.\nHard skills:",
+    "soft": "Soft skills: ",
+    "hard": "Hard skills:",
+    "info": "attentiveness, respect for colleagues, perseverance, purposefulness, moderate initiative, ability to work in a team. I have experience working in different companies (as a system administrator) and interacting with people with different technical backgrounds.\nI have experience in selecting tasks, drawing up a plan for solving problems.\n",
     "html": "Understanding the flow of elements, positioning of elements, semantic and valid layout. Working with developer tools in the browser.",
     "scss": "Working with the sass preprocessor, understanding selectors, principles of animation creation, the ability to make up adaptively and cross-browser, using flex, grid, relative values. Working with svg, figma and photoshop. Understanding the work of bootstrap (a little experience using the grid), understanding the BEM methodology (not used in practice).",
-    "js": "Confident basic knowledge of JavaScript (functions, data types, operators, keywords, working with asynchrony, understanding OOP, etc.), understanding and basic knowledge of TypeScript (types, interfaces, enumerations) and the need to use. Understanding how unit tests work, I used jest in practice.",
+    "js": "Confident basic knowledge of JavaScript (functions, data types, operators, keywords, working with asynchrony, understanding OOP, etc.), understanding and basic knowledge of TypeScript (types, interfaces, enumerations) and purose to use. Understanding how unit tests work, I used jest in practice.",
     "react": "Confident basic knowledge of React and understanding of the principles of operation (VirtualDOM, reactivity, lazy loading, using hooks (state, effect, ref, callback), state managers, understanding the context, react-router, working with API, Next.js (this site uses it), understanding SSR, SSG.",
     "english": "I speak English at an intermediate level (B1), I can read documentation in English. If necessary, I can study the language and improve my level of proficiency."
     }

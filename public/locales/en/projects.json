@@ -1,0 +1,26 @@
+{
+    "head": {
+      "title": "Projects",
+      "description": "Evgeniy's (JohnZoidy) personal page, frontend developer portfolio"
+    },
+    "h2": "Projects",
+    "kvartirka": {
+      "title": "Test assignment for a junior frontend in the company \"Kvartirka\"",
+      "description": "An online service for monitoring and destroying dangerous asteroids based on NASA API data.\nOn the main page there is a list of asteroid approaches to Earth from the current date to infinity. Loading when scrolling in portions. For each asteroid: name, size, hazard assessment, how close it will be to Earth, the exact date of the maximum approach. The approach icon depends on the danger. Filter by danger. And the option of displaying distances: in kilometers or distances to the Moon.\nIn the background of the header there is an image that should be received in the NASA APOD API (picture of the day).\nIn the detailed information on the asteroid, in addition to the information listed above, there is a list of all its approaches. For each approach: the speed relative to the Earth, the time of maximum approach to the Earth, the distance to the Earth, in orbit around which it flies.\nIn the list and on the asteroid page there is a button to add an asteroid to the list for destruction.\nThe list for destruction is a kind of basket where the selected asteroid approaches are displayed. At the end of the page there is a brig order button."
+  },
+  "pizza": {
+      "title": "Online pizza shop",
+      "description": "Standard online pizza shop. There is a possibility of filling the basket, searching for goods. Data loading is implemented via the API. Educational project based on the materials of the YouTube channel"
+  },
+  "chat": {
+      "title": "Real-time chat app",
+      "description": "Simple real-time chat with the ability to create separate channels, registration and authorization. The server part of the project is provided by the online programming school"
+  },
+  "rest": {
+      "title": "Other projects",
+      "description": "Here are the rest of the test assignments from different companies, as well as other projects.",
+      "proj-1": "A test assignment for the position of an intern in Mindbox. A simple ToDo application, using localStorage, React and Redux. Code on",
+      "proj-2": "A test assignment for Junior position in FunBox. Cards with adaptive layout, using React and Code on",
+      "proj-3": "A test assignment for Junior position in Jupiter-soft. Cards with adaptive layout, using React, Redux, and CSS. It is possible to sort, select and delete using the del key. Code on"
+  }
+}

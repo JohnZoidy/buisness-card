@@ -22,14 +22,11 @@ $porcent-english: 50;
   z-index: 1;
   p {
     width: 70%;
-    font-family: "Raleway", sans-serif;
-    font-size: 22px;
     margin: 0;
     padding: 0;
     text-align: justify;
   }
 }
-
 
 .progressbar {
   position: relative;
@@ -113,5 +110,12 @@ $porcent-english: 50;
 @keyframes anim_circle-english {
   to {
     stroke-dashoffset: strokeDashoffset($porcent-english);
+  }
+}
+
+@media screen and (max-width:1300px) {
+  .skill {
+    flex-direction: column;
+    border-bottom: none;
   }
 }
