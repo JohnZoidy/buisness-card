@@ -1,16 +1,19 @@
-.pdf {
+.pdf, .hh { 
     position: relative;
     width: 96px;
     height: 96px;
+    text-align: center;
+    margin: 20px;
+    transition: all 0.5s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
+
 .hh {
-    position: relative;
-    width: 96px;
-    height: 96px;
     padding: 15px;
     border-radius: 50%;
     background: #d6001c;
-    transition: all 0.5s ease;
     &:hover {
         background:#f0485e;
     }

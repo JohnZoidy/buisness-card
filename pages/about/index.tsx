@@ -16,7 +16,7 @@ const About: NextPage = () => {
       <h2>{t('h2')}</h2>
       <div className={styles.content}>
         <p>
-          <Image src="/photo2.jpg" alt="photo" width={1024} height={700} />
+          <Image title={t('me')} src="/photo2.jpg" alt="photo" width={1024} height={700} />
           {t('text')}
         </p>
       </div>

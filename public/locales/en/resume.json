@@ -3,5 +3,8 @@
     "title": "Download CV",
     "description": "Evgeniy's (JohnZoidy) personal page, frontend developer portfolio"
   },
-  "h2": "Download resume"
+  "h2": "Download resume",
+  "visit": "watch on hh.ru",
+  "hh": "download from hh.ru",
+  "hexlet": "download from hexlet CV"
   }
