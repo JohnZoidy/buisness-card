@@ -65,3 +65,9 @@
   50%  {width: 32vh; height: 32vh;}
    100%  {width: 8vh; height: 8vh;}
 }
+
+@media screen and (max-width:700px) {
+  .bubbles {
+    visibility: collapse;
+  }
+}

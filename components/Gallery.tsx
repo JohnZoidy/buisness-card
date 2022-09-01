@@ -17,14 +17,14 @@ const Gallery: FC<galleryProps> = ({ slidesData }) => {
   return (
     <div className={styles.gallery}>
         {slidesData.map((data, index) => <div key={index} className={styles.image}>
-            <Image src={data} width="312.5px" height="160px" alt='' onClick={() => showModal(data)}/>
+            <Image src={data} width="312.5px" height="160px" alt='thumbnail' onClick={() => showModal(data)}/>
         </div> )}
         {isModal && <>
           <div className={styles.shadow} />
           <div className={styles.modal}>
           <div className={styles.close_button} onClick={() => setIsModal(false)}>X</div>
           <div className={styles.image_full}>
-            <Image src={activeSlide} width="1250px" height="640px" layout="responsive" alt='' />
+            <Image src={activeSlide} width="1250px" height="640px" layout="responsive" alt='screen from project' />
           </div>
              </div>
         </>}
